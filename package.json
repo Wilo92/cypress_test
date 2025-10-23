@@ -1,0 +1,18 @@
+{
+  "name": "cypress_prueba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run:chrome": "npx cypress run --browser chrome --spec \"cypress/e2e/login_logout.cy.js\"",
+    "cypress:run:headed": "npx cypress run --headed --browser chrome --spec \"cypress/e2e/login_logout.cy.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.5.0"
+  }
+}
