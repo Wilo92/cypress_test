@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
@@ -6,10 +6,16 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.cy.{js,ts}',
     supportFile: false,
     video: true,
-    ////videoUploadOnPasses:false,
     screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
-      return config
-    }
+      return config;
+    },
+  },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports', 
+    overwrite: false,
+    html: false, 
+    json: true   
   }
-})
+});

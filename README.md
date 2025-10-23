@@ -1,5 +1,8 @@
 # Proyecto de Pruebas Automatizadas con Cypress
 
+![Cypress Logo](https://raw.githubusercontent.com/cypress-io/cypress/develop/assets/cypress-logo-dark.png)
+
+
 ## Descripción
 Este proyecto contiene pruebas end-to-end (E2E) desarrolladas con [Cypress](https://www.cypress.io/) para validar el funcionamiento del sitio web [https://www.saucedemo.com](https://www.saucedemo.com).  
 Se automatizan escenarios relacionados con el inicio de sesión (login) y cierre de sesión (logout), verificando tanto casos válidos como errores esperados.
@@ -140,9 +143,11 @@ cypress/videos/login_logout.cy.js.mp4
 
 ---
 
-##  Autor
-**Wilo**  
-Auditor e Ingeniero de Sistemas  
+##  Autores
+**Wilmer Restrepo**
+**Mario Yepes** 
+**Nicolas Giraldo** 
+
 Proyecto de demostración QA con Cypress  
 Año: 2025  
 
