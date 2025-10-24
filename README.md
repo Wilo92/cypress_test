@@ -4,7 +4,7 @@
 
 
 ## Descripción
-Este proyecto contiene pruebas end-to-end (E2E) desarrolladas con [Cypress](https://www.cypress.io/) para validar el funcionamiento del sitio web [https://www.saucedemo.com](https://www.saucedemo.com).  
+Este proyecto contiene pruebas end-to-end (E2E) desarrolladas con [Cypress](https://www.cypress.io/) para validar el funcionamiento del sitio web [https://www.saucedemo.com](https://www.saucedemo.com).
 Se automatizan escenarios relacionados con el inicio de sesión (login) y cierre de sesión (logout), verificando tanto casos válidos como errores esperados.
 
 ---
@@ -38,7 +38,7 @@ cypress_prueba/
 ###  Clonar el repositorio
 ```bash
 git clone https://github.com/Wilo92/cypress_test
-cd cypress_prueba
+cd cypress_test
 ```
 
 ###  Instalar dependencias
@@ -105,7 +105,7 @@ Los videos se guardan automáticamente en la carpeta:
 cypress/videos/
 ```
 
-Ejemplo:  
+Ejemplo:
 ```
 cypress/videos/login_logout.cy.js.mp4
 ```
@@ -145,11 +145,11 @@ cypress/videos/login_logout.cy.js.mp4
 
 ##  Autores
 **Wilmer Restrepo**
-**Mario Yepes** 
-**Nicolas Giraldo** 
+**Mario Yepes**
+**Nicolas Giraldo**
 
-Proyecto de demostración QA con Cypress  
-Año: 2025  
+Proyecto de demostración QA con Cypress
+Año: 2025
 
 ---
 
