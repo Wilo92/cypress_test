@@ -144,9 +144,9 @@ cypress/videos/login_logout.cy.js.mp4
 ---
 
 ##  Autores
-**Wilmer Restrepo**
-**Mario Yepes**
-**Nicolas Giraldo**
+- **Wilmer Restrepo**
+- **Mario Yepes**
+- **José Nicolás Aristizabal Ramirez**
 
 Proyecto de demostración QA con Cypress
 Año: 2025
