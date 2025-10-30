@@ -1,0 +1,7 @@
+.env
+node_modules/
+cypress.env.json
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*

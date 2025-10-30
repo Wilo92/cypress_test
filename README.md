@@ -155,3 +155,12 @@ Año: 2025
 
 ##  Licencia
 Este proyecto es libre para uso académico y de aprendizaje.
+
+
+# open cypress - to verify global installation
+npx cypress open
+
+# version
+npx cypress --version
+npx cypress run  # sin interfaz
+npx cypress run --spec 'cypress/e2e/01-login/login.cy.js'
