@@ -19,6 +19,12 @@ describe("Pruebas de selección de productos - multi dispositivo", () => {
         productsPage.verifyPageLoaded(); // verificar que las etiquetas de productos sean visibles
       });
 
+      afterEach(function () {
+        // Genera un nombre de archivo claro usando el dispositivo y el título del test
+        const screenshotName = `${name} - ${this.currentTest.title}`;
+        cy.screenshot(screenshotName);
+      });
+
       it(`Seleccionar un producto en ${name}`, () => {
         const productName = "Sauce Labs Backpack";
 

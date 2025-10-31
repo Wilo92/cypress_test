@@ -22,6 +22,12 @@ describe("Pruebas de ir al carrito - multi dispositivo", () => {
         productsPage.verifyPageLoaded();
       });
 
+      afterEach(function () {
+        // Genera un nombre de archivo descriptivo para la carpeta 03-go_to_cart
+        const screenshotName = `${name} - ${this.currentTest.title}`;
+        cy.screenshot(screenshotName);
+      });
+
       it(`Agregar producto y navegar al carrito en ${name}`, () => {
         const productName = "Sauce Labs Backpack";
 

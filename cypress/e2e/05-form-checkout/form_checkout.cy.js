@@ -53,6 +53,12 @@ describe("Pruebas de formulario de checkout - multi dispositivo", () => {
         checkoutPage.verifyPageLoaded();
       });
 
+      afterEach(function () {
+          // Genera un nombre de archivo descriptivo para la carpeta 05-form-checkout
+          const screenshotName = `${name} - ${this.currentTest.title}`;
+          cy.screenshot(screenshotName);
+      });
+
       // Llenar el formulario y avanzar ---
       it(`Completar formulario de checkout en ${name}`, () => {
         const checkout = checkoutData.standardCheckout;

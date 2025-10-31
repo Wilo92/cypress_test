@@ -23,6 +23,12 @@ describe("Pruebas de logout - multi dispositivo", () => {
         productsPage.verifyPageLoaded();
       });
 
+      afterEach(function () {
+        // Genera un nombre de archivo descriptivo para la carpeta 08-logout
+        const screenshotName = `${name} - ${this.currentTest.title}`;
+        cy.screenshot(screenshotName);
+      });
+
       it(`Cerrar sesión desde menú en ${name}`, () => {
         productsPage.logout();
 

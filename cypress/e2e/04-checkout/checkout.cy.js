@@ -31,6 +31,12 @@ describe("Pruebas de checkout - multi dispositivo", () => {
         cartPage.verifyPageLoaded();
       });
 
+      afterEach(function () {
+        // Genera un nombre de archivo descriptivo para la carpeta 04-checkout
+        const screenshotName = `${name} - ${this.currentTest.title}`;
+        cy.screenshot(screenshotName);
+      });
+
       it(`Iniciar checkout desde carrito en ${name}`, () => {
         cartPage
           .clickCheckout();

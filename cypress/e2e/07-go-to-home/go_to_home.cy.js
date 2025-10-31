@@ -31,6 +31,12 @@ describe("Pruebas de volver a home - multi dispositivo", () => {
         productsPage.verifyPageLoaded();
       });
 
+      afterEach(function () {
+          // Genera un nombre de archivo descriptivo para la carpeta 07-go-to-home
+          const screenshotName = `${name} - ${this.currentTest.title}`;
+          cy.screenshot(screenshotName);
+      });
+
       it(`Volver a home desde carrito usando Continue Shopping en ${name}`, () => {
         const productName = "Sauce Labs Backpack";
 
