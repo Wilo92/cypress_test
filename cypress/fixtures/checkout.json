@@ -1,0 +1,13 @@
+{
+  "standardCheckout": {
+    "firstName": "Juan",
+    "lastName": "Pérez",
+    "postalCode": "12345"
+  },
+  "visualCheckout": {
+    "firstName": "María",
+    "lastName": "González",
+    "postalCode": "67890"
+  }
+}
+
