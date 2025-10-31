@@ -3,24 +3,31 @@ import users from "../../fixtures/users.json";
 import devices from "../../fixtures/devices.json";
 
 describe("Pruebas de inicio de sesión - multi dispositivo", () => {
-  const urlHome = Cypress.env("urlHome");
 
-  devices.forEach(({ name, width, height }) => {
-    describe(`Pruebas en ${name}`, () => {
-      beforeEach(() => {
-        cy.viewport(width, height);
-      });
+//la URL base venía de 'Cypress.env("urlHome")',resultaba 'undefined'.con 'Cypress.config().baseUrl', es para la url principal de la aplicación.
 
-      it(`Login usuario estándar en ${name}`, () => {
-        cy.login(users.standard.username, users.standard.password);
-        cy.url().should("eq", urlHome);
-      });
 
-      it(`Login usuario visual en ${name}`, () => {
-        cy.login(users.visual.username, users.visual.password);
-        cy.url().should("eq", urlHome);
-        cy.screenshot();
-      });
+    const urlBase = Cypress.config().baseUrl;
+//  URL de inventario usando la URL base, Esta es la URL a que debe de ir despues de login exitoso un login exitoso.
+
+    const urlInventory = urlBase + "inventory.html";
+
+    devices.forEach(({ name, width, height }) => {
+        describe(`Pruebas en ${name}`, () => {
+            beforeEach(() => {
+                cy.viewport(width, height);
+            });
+
+            it(`Login usuario estándar en ${name}`, () => {
+                cy.login(users.standard.username, users.standard.password);
+                cy.url().should("eq", urlInventory);
+            });
+
+            it(`Login usuario visual en ${name}`, () => {
+                cy.login(users.visual.username, users.visual.password);
+                cy.url().should("eq", urlInventory);
+                cy.screenshot();
+            });
+        });
     });
-  });
 });

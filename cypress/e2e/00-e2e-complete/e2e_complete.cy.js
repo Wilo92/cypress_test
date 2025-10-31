@@ -10,7 +10,10 @@ import CompletePage from "../../pages/CompletePage.js";
 import LoginPage from "../../pages/LoginPage.js";
 
 describe("Flujo E2E completo - multi dispositivo", () => {
-  const urlLogin = Cypress.env("urlPagina");
+
+    //el test fallaba porque no sabía con qué URL exacta comparar después del logout.por eso siempre decia indefined porque no encontraba la url
+    
+  const urlLogin = Cypress.config().baseUrl;
   let productsPage;
   let cartPage;
   let checkoutPage;

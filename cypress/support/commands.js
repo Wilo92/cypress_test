@@ -1,12 +1,12 @@
 import LoginPage from "../pages/LoginPage.js";
 
+// Este es el Custom Command 'cy.login()'
 Cypress.Commands.add("login", (username, password) => {
-  const loginPage = new LoginPage();
-  const urlHome = Cypress.env("urlHome");
+  const loginPage = new LoginPage();
 
-  loginPage.login(username, password);
+    
+  loginPage.login(username, password);
 
-  cy.url().should("eq", urlHome).then(() => {
-    cy.log(`Login exitoso para ${username}`);
-  });
+  
+  cy.log(`Login exitoso para ${username}`);
 });

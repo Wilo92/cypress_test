@@ -12,7 +12,7 @@ class LoginPage extends BasePage {
   }
 
   visitLogin() {
-    this.visit(Cypress.env("urlPagina"));
+    this.visit('/');
     return this;
   }
 
@@ -49,6 +49,14 @@ class LoginPage extends BasePage {
     return this;
   }
 }
+
+
+// Elimi el método verifySuccess, la asercion de url debe hacerse en el basePage.js, este archiv solo debe manejar la interacción con la página.
+  // verifySuccess(urlHome) {
+  //   this.shouldUrlEqual(urlHome);
+  //   return this;
+  // }
+
 
 export default LoginPage;
 
