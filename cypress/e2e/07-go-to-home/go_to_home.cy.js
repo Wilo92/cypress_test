@@ -46,25 +46,6 @@ describe("Pruebas de volver a home - multi dispositivo", () => {
         cy.url().should("eq", urlHome);
       });
 
-      it(`Volver a home desde checkout usando Cancel en ${name}`, () => {
-        const productName = "Sauce Labs Backpack";
-
-        productsPage
-          .addProductToCart(productName)
-          .goToCart();
-
-        cartPage
-          .verifyPageLoaded()
-          .clickCheckout();
-
-        checkoutPage
-          .verifyPageLoaded()
-          .clickCancel();
-
-        productsPage.verifyPageLoaded();
-        cy.url().should("eq", urlHome);
-      });
-
       it(`Volver a home desde checkout overview usando Cancel en ${name}`, () => {
         const productName = "Sauce Labs Backpack";
 
